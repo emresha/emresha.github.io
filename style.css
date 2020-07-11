@@ -221,3 +221,18 @@ html, body {
   border-radius: 3px;
   transition: 0.4s;
 }
+.login-popup input[type="submit"] {
+  text-align: center;
+  transition: 0.4s;
+  width: 80%;
+  min-width: 150px;
+  margin-bottom: 15px;
+  background-color: #1abc9c;
+  border-radius: 3px;
+  border: 2px	#16a085 solid;
+
+}
+
+.login-popup input[type="submit"]:hover {
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,0.24), 0 9px 25px 0 rgba(0,0,0,0.19);
+}
