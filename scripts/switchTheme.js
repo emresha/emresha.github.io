@@ -1,5 +1,13 @@
 
 document.querySelector('.changeThemeIcon').onclick = function () {
+  let loginPopup = document.querySelector('.login-popup');
+  loginPopup.classList.toggle('dark');
+  if (loginPopup.classList.contains('dark')) {
+    loginPopup.style.background = "#404040";
+  }
+  else {
+    loginPopup.style.background = "white";
+  }
   let helpMEPLEASE = document.querySelector('.changeThemeIcon');
   helpMEPLEASE.classList.toggle('light')
   document.querySelector('.order').classList.toggle('dark');
@@ -13,6 +21,4 @@ document.querySelector('.changeThemeIcon').onclick = function () {
     b[i].toggle('dark');
   }
   document.querySelector('a').classList.toggle('dark');
-  document.querySelector('.login-popup').classList.toggle('dark');
-
 }

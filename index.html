@@ -5,9 +5,10 @@
     <link rel='stylesheet' href='style.css'>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
+    <link rel="shortcut icon" href="ico/logo_small.png" type="image/png">
+    <title>ВДурке | Добро пожаловать!</title>
   </head>
-  <body onresize="checkWidth()" onload="checkWidth()" onwaiting="checkWidth()">
+  <body onresize="checkWidth()" onload="checkWidth()">
     <script>
       function popupVisible() {
         if (document.querySelector('.login-popup').style.display === "none") {
@@ -52,8 +53,7 @@
     </script>
     <div class="roof">
       <img src="ico/logo3.png" style="border: none; margin-left: 5px; align-self: center;" height="50px" width="120px">
-      <!-- <img style="flex-shrink: 0; cursor: pointer; transition: 0.4s; background: inherit;" onclick="this.classList.toggle('dark')" class="changeThemeIcon" title="Включить тёмную тёму" src="ico/dark-theme_new2.svg" alt="" height="30px"> -->
-      <div class="changeThemeIcon" style="width: 30px; height: 30px; cursor: pointer;" title="Сменить цветовую тему"></div>
+      <div class="changeThemeIcon" style="width: 35px; height: 35px; cursor: pointer; background-repeat: no-repeat;" title="Сменить цветовую тему"></div>
     </div>
     <div class="order">
     <div class='bordered greet'>
@@ -61,7 +61,7 @@
     <p>ВДурке - это социальная сеть, позволяющая вам общаться с вашими друзьями, родственниками, любимыми и близкими, не выходя из дома. Ещё мы предоставляем возможность людям объединяться в группы по интересам, оценивать записи, оставлять под записями свои мысли и много чего ещё!</p>
     <img src="photos/saniatr.png" alt="durka-greeting" height="300" >
   </div>
-  <div class="login-covid" style="border: none; background: inherit; margin: 0; transition: 0s;">
+  <div class="login-covid" style="border: none; background: inherit; transition: 0s;">
   <div class="bordered login">
 
       <h1 style="text-align: center;">Регистрация</h1>
@@ -72,7 +72,7 @@
       <input type="submit" name="" onclick="checkField()" class="reg" value="Продолжить регистрацию">
 
       <span><p class="incorrect" style="display: none;">Пароли не сходятся</p></span>
-      <p class="already-have">Вы уже есть ВДурке? <a onclick="popupVisible()" style="text-decoration: underline; cursor: pointer; color: blue;">Войти</a></p>
+      <p class="already-have">Вы уже есть ВДурке? <a onclick="popupVisible()" style="cursor: pointer; color: blue;">Войти</a></p>
       <p class="already-have">Войти с помощью:</p>
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1200px-Google_%22G%22_Logo.svg.png" alt="" height="40px">
       <img src="ico/vkround.png" alt="" height="40px">
@@ -87,15 +87,16 @@
 </div>
 </div>
 <div class="login-popup bordered" style="text-align: center; display: none;">
-  <img src="ico/closeButton.svg" width="15px" style="float: left; cursor: pointer;" onclick="popupVisible()" title="Закрыть окно">
+  <img src="ico/closeButton2.svg" width="15px" style="float: left; cursor: pointer;" onclick="popupVisible()" title="Закрыть окно">
   <h1>Вход</h1>
   <p>Если у вас уже есть аккаунт ВДурке, то вводите те данные, которые использовали при регистрации.</p>
-  <input type="text" name="change" class="login-plhr" onkeyup="this.classList.remove('incorrect1')" placeholder="Ваш никнейм" onfocus="document.querySelectorAll('.login-plhr')[0].placeholder = ''" onblur="document.querySelectorAll('.login-plhr')[0].placeholder = 'Ваш никнейм'">
-  <input type="password" name="change" onkeyup="this.classList.remove('incorrect1'), check()" class="login-plhr" placeholder="Ваш пароль" onfocus="document.querySelectorAll('.login-plhr')[1].placeholder = ''" onblur="document.querySelectorAll('.login-plhr')[1].placeholder = 'Ваш пароль'">
-  <input type="submit" name="" value="Войти">
+  <input type="text" name="change" class="login-plhr" placeholder="Ваш никнейм" onfocus="document.querySelectorAll('.login-plhr')[0].placeholder = ''" onblur="document.querySelectorAll('.login-plhr')[0].placeholder = 'Ваш никнейм'">
+  <input type="password" name="change" class="login-plhr" placeholder="Ваш пароль" onfocus="document.querySelectorAll('.login-plhr')[1].placeholder = ''" onblur="document.querySelectorAll('.login-plhr')[1].placeholder = 'Ваш пароль'">
+  <input type="submit" name="" value="Войти" style="cursor: pointer;">
+  <script src="scripts/switchTheme.js">
+  </script>
 </div>
-<script src="scripts/switchTheme.js">
-</script>
+
 <script src="scripts/covid.js">
 </script>
 <script src="scripts/responsiveDesign.js">

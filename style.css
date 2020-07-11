@@ -1,11 +1,11 @@
 .greet {
   padding: 5px;
   margin: 3px;
+  margin-bottom: 0;
   flex-direction: column;
   order: 0;
   padding-bottom: 0;
-  margin-right: 0;
-  max-width: 600px;
+  max-width: 550px;
 
 
 }
@@ -43,8 +43,9 @@
   z-index: 0;
 }
 .login {
+  margin: 0;
+  margin-bottom: 3px;
   max-width: 500px;
-  margin: 3px;
   text-align: center;
   flex-direction: column;
   order: 2;
@@ -81,10 +82,10 @@ div {
   text-align: center;
   display: block;
   margin: auto;
-  height: 15px;
+  height: 20px;
   width: 225px;
   min-width: 100px;
-  margin-bottom: 3px;
+  margin-bottom: 5px;
   border: 1px #C0C0C0 solid;
   border-radius: 3px;
   transition: 0.4s;
@@ -158,9 +159,9 @@ html, body {
   font-weight: 700;
 }
 .covid {
-  max-width: 500px;
+  margin-top: 3px;
+  margin: 0;
   order: 3;
-  padding: 3px;
   text-align: center;
 }
 .covid sub {
@@ -192,13 +193,14 @@ html, body {
   color: white;
 }
 .login-covid {
+  margin: 3px;
   max-width: 700px;
 }
 .dark h1 {
   color: white;
 }
 .light {
-  background: url('ico/light_theme.svg') !important;
+  background: url('ico/light_theme.svg') no-repeat !important;
 }
 .login-popup {
   width: 80%;
@@ -214,7 +216,7 @@ html, body {
 .login-popup input[type="text"],.login-popup input[type="password"] {
   text-align: center;
   margin-bottom: 5px;
-  height: 15px;
+  height: 20px;
   width: 80%;
   min-width: 150px;
   border: 1px #C0C0C0 solid;
@@ -222,9 +224,10 @@ html, body {
   transition: 0.4s;
 }
 .login-popup input[type="submit"] {
+  margin-top: 10px;
   text-align: center;
   transition: 0.4s;
-  width: 80%;
+  width: 90%;
   min-width: 150px;
   margin-bottom: 15px;
   background-color: #1abc9c;
@@ -235,4 +238,12 @@ html, body {
 
 .login-popup input[type="submit"]:hover {
     box-shadow: 0 3px 4px 0 rgba(0,0,0,0.24), 0 9px 25px 0 rgba(0,0,0,0.19);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.login-popup input[type="text"]:focus,.login-popup input[type="password"]:focus {
+  width: 85%;
 }
