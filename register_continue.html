@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='styles/continue_reg_style.css'>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="ico/logo_small.png" type="image/png">
+  <title>Продолжить регистрацию</title>
+</head>
+  <body>
+
+    <div class="roof">
+      <img src="ico/logo3.png" style="border: none; margin-left: 5px; align-self: center;" height="50px" width="120px">
+      <div class="changeThemeIcon" style="width: 35px; height: 35px; cursor: pointer; background-repeat: no-repeat;" title="Сменить цветовую тему"></div>
+    </div>
+    <div class="reg bordered" style='text-align: center;'>
+      <h1 style="border-bottom: 1px #C0C0C0 solid; padding-bottom: 5px;">Регистрация</h1>
+      <p>Спасибо, что заинтересовались в регистрации ВДурке! Пожалуйста, вводите свои настоящие данные, чтобы найти вас ВДурке было легче.</p>
+      <p style="font-size: 12px;">* обязательно</p>
+      <input type="name" name="" placeholder="Ваше имя *">
+      <input type="name" name="" placeholder="Ваша фамилия *">
+      <input type="email" name="" placeholder="Ваша почта *">
+      <textarea name="name" rows="4" cols="80" placeholder="О вас" oninput="symbolsCount()" onkeyup="symbolsCount()"></textarea>
+      <p class="counter" style="font-size: 10px; margin: 0; text-align: left; margin-left: 15%;" >Символов осталось: <span class='numbers'>255</span></p>
+      <input type="submit" name="" value="Закончить регистрацию" class="submit_button" onclick="checkFields(), document.location.href='register_continue.html'">
+      <script>
+        function symbolsCount() {
+
+          let text = document.querySelector('textarea');
+          let count = 256 - text.value.length;
+          let counter = document.querySelector('.numbers');
+          if (count <= 0) {
+            text.value = text.value.slice(0, count-1);
+          }
+          else if (count < 18) {
+              counter.classList.add('red');
+              counter.textContent = count - 1;
+          }
+          else {
+          counter.classList.remove('red');
+          counter.textContent = count - 1;
+        }
+        }
+      </script>
+    </div>
+  </body>
+</html>

@@ -2,7 +2,7 @@
 <html lang="ru" dir="ltr">
   <head>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel='stylesheet' href='style.css'>
+    <link rel='stylesheet' href='styles/welcome_style.css'>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="ico/logo_small.png" type="image/png">
@@ -69,7 +69,7 @@
       <input type="text" name="change" class="yeah" onkeyup="this.classList.remove('incorrect1')" placeholder="Придумайте никнейм" onfocus="document.querySelectorAll('.yeah')[0].placeholder = ''" onblur="document.querySelectorAll('.yeah')[0].placeholder = 'Придумайте никнейм'">
       <input type="password" name="change" onkeyup="this.classList.remove('incorrect1'), check()" class="yeah" placeholder="Придумайте пароль" onfocus="document.querySelectorAll('.yeah')[1].placeholder = ''" onblur="document.querySelectorAll('.yeah')[1].placeholder = 'Придумайте пароль'">
       <input type="password" name="change" onkeyup="this.classList.remove('incorrect1'), check()" class="yeah" placeholder="Подтвердите пароль" onfocus="document.querySelectorAll('.yeah')[2].placeholder = ''" onblur="document.querySelectorAll('.yeah')[2].placeholder = 'Подтвердите пароль'">
-      <input type="submit" name="" onclick="checkField()" class="reg" value="Продолжить регистрацию">
+      <a href="register_continue.html"><input type="submit" name="" onclick="checkField()" class="reg" value="Продолжить регистрацию"></a>
 
       <span><p class="incorrect" style="display: none;">Пароли не сходятся</p></span>
       <p class="already-have">Вы уже есть ВДурке? <a onclick="popupVisible()" style="cursor: pointer; color: blue;">Войти</a></p>
@@ -87,12 +87,16 @@
 </div>
 </div>
 <div class="login-popup bordered" style="text-align: center; display: none;">
-  <img src="ico/closeButton2.svg" width="15px" style="float: left; cursor: pointer;" onclick="popupVisible()" title="Закрыть окно">
-  <h1>Вход</h1>
+  <h1 style="border-bottom: 1px #c0c0c0 solid;">Вход</h1>
   <p>Если у вас уже есть аккаунт ВДурке, то вводите те данные, которые использовали при регистрации.</p>
   <input type="text" name="change" class="login-plhr" placeholder="Ваш никнейм" onfocus="document.querySelectorAll('.login-plhr')[0].placeholder = ''" onblur="document.querySelectorAll('.login-plhr')[0].placeholder = 'Ваш никнейм'">
   <input type="password" name="change" class="login-plhr" placeholder="Ваш пароль" onfocus="document.querySelectorAll('.login-plhr')[1].placeholder = ''" onblur="document.querySelectorAll('.login-plhr')[1].placeholder = 'Ваш пароль'">
-  <input type="submit" name="" value="Войти" style="cursor: pointer;">
+  <div class="submit-close">
+    <input type="submit" name="" value="Войти" style="cursor: pointer;">
+    <input type="submit" name="" value="Закрыть" style="cursor: pointer; background: white; border-radius: 3px; border: 2px	#C0C0C0 solid;" onclick="popupVisible()">
+    <p style=" float: left; margin-top: 0px; margin-left: 3px; font-size: 12px;">Забыли пароль? <a class="forgotten" href="" style="text-decoration: none; color: blue;" title="Восстановление пароля">Восстановить</a></p>
+  </div>
+
   <script src="scripts/switchTheme.js">
   </script>
 </div>

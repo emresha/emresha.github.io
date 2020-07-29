@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+
+.roof {
+  display: flex;
+  background-color: #1abc9c;
+  margin: 0;
+  border-bottom: solid 2px #16a085;
+  justify-content : space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+.changeThemeIcon {
+  margin-right: 5px;
+  margin: 1px;
+  border: 3px #16a085 solid;
+  border-radius: 50%;
+  background: url('C:/Users/emres/Desktop/thesite/social network/ico/dark-theme_new2.svg');
+}
+
+.bordered {
+    border-radius: 3px;
+    border: 1px	#C0C0C0 solid;
+}
+
+body {
+  margin: 0;
+  background: #E8E8E8;
+  display: flex;
+  flex-direction: column;
+}
+
+div {
+  margin: 3px;
+  background-color: white;
+}
+.reg {
+  align-self: center;
+  padding: 5px;
+  margin: 3px;
+  width: 50%;
+  max-width: 500px;
+  min-width: 250px;
+}
+.reg input[type="name"], .reg input[type="email"] {
+  width: 70%;
+  text-align: center;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  height: 25px;
+  border: 1px #C0C0C0 solid;
+  transition: 0.4s;
+  min-width: 200px;
+}
+.reg input[type="name"]:focus, .reg input[type="email"]:focus {
+  width: 75%;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+h1 {
+  font-family: 'Roboto', sans-serif;
+}
+
+textarea {
+  min-width: 200px;
+  border: 1px #C0C0C0 solid;
+  resize: none;
+  width: 70%;
+  border-radius: 3px;
+  font-family: 'Roboto', sans-serif;
+  transition: 0.4s;
+}
+
+textarea:focus {
+  width: 75%;
+}
+
+textarea::placeholder {
+  text-align: center;
+}
+
+.submit_button {
+  min-width: 200px;
+  background-color: #1abc9c;
+  border: 2px #16a085 solid;
+  border-radius: 2px;
+  height: 3em;
+  width: 70%;
+  cursor: pointer;
+  transition: 0.4s;
+  margin-bottom: 10px;
+}
+
+.submit_button:hover {
+  box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.red {
+  color: red;
+}

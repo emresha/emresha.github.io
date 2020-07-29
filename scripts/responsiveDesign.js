@@ -2,7 +2,8 @@ function checkWidth(){
   if(window.innerWidth !== undefined && window.innerHeight !== undefined) {
     var w = window.innerWidth;
     var h = window.innerHeight;
-  } else {
+  }
+  else {
     var w = document.documentElement.clientWidth;
     var h = document.documentElement.clientHeight;
   }
