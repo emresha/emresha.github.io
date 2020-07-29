@@ -33,7 +33,7 @@
   margin: 1px;
   border: 3px #16a085 solid;
   border-radius: 50%;
-  background: url('ico/dark-theme_new2.svg');
+  background: url('C:/Users/emres/Desktop/thesite/social network/ico/dark-theme_new2.svg');
 
 }
 .roof p {
@@ -117,6 +117,7 @@ div {
 .order {
   width: 100%;
   display: flex;
+  display: -webkit-flex;
   justify-content: center;
   flex-flow: row nowrap;
   align-items: flex-start;
@@ -200,7 +201,7 @@ html, body {
   color: white;
 }
 .light {
-  background: url('ico/light_theme.svg') no-repeat !important;
+  background: url('C:/Users/emres/Desktop/thesite/social network/ico/light_theme.svg') no-repeat !important;
 }
 .login-popup {
   width: 80%;
@@ -216,24 +217,37 @@ html, body {
 .login-popup input[type="text"],.login-popup input[type="password"] {
   text-align: center;
   margin-bottom: 5px;
-  height: 20px;
-  width: 80%;
+  font-size: 16px;
+  height: 30px;
+  width: 78.5%;
   min-width: 150px;
   border: 1px #C0C0C0 solid;
   border-radius: 3px;
   transition: 0.4s;
 }
+.login-popup input[type="submit"]:active {
+  transform: translateY(1px);
+}
+
 .login-popup input[type="submit"] {
-  margin-top: 10px;
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 2px;
   text-align: center;
   transition: 0.4s;
-  width: 90%;
+  width: 40%;
+  height: 30px;
   min-width: 150px;
-  margin-bottom: 15px;
   background-color: #1abc9c;
   border-radius: 3px;
   border: 2px	#16a085 solid;
 
+}
+.submit-close {
+  padding: 0;
+  margin: auto;
+  text-align: center;
+  width: 80%;
 }
 
 .login-popup input[type="submit"]:hover {
@@ -246,4 +260,11 @@ html, body {
 
 .login-popup input[type="text"]:focus,.login-popup input[type="password"]:focus {
   width: 85%;
+}
+.forgotten:active {
+  transform: translateY(1px);
+}
+
+input {
+  outline: none;
 }
