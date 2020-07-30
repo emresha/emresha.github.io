@@ -63,10 +63,10 @@ body {
 }
 
 p {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 h1 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 div {
@@ -82,7 +82,8 @@ div {
   text-align: center;
   display: block;
   margin: auto;
-  height: 20px;
+  height: 30px;
+  font-size: 16px;
   width: 225px;
   min-width: 100px;
   margin-bottom: 5px;
@@ -99,7 +100,8 @@ div {
   border: 2px	#16a085 solid;
   margin: 10px;
   width: 250px;
-  height: 22px;
+  height: 30px;
+  font-size: 16px;
   transition: 0.4s;
   margin-bottom: 2px;
 
@@ -109,9 +111,12 @@ div {
   cursor: pointer;
 
 }
+.login input[type="submit"]:active {
+  transform: translateY(1px);
+}
 
 .already-have {
-  font-size: 12px;
+  font-size: 14px;
   color: grey;
 }
 .order {
@@ -267,4 +272,25 @@ html, body {
 
 input {
   outline: none;
+}
+
+.vk-popup {
+  transition: 0.4s;
+  padding: 5px;
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.vk-popup input {
+  transition: 0.4s;
+  background-color: #1abc9c;
+  border-radius: 3px;
+  border: 2px	#16a085 solid;
+}
+
+.vk-popup input:active {
+  transform: translateY(1px);
 }

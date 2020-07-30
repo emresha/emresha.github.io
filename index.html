@@ -2,6 +2,7 @@
 <html lang="ru" dir="ltr">
   <head>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='styles/welcome_style.css'>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,6 +36,7 @@
         else {
             sp.style.display = "none"
           }
+        return pas1 === pas2
       };
       function checkField() {
         let pas1 = document.querySelectorAll('.yeah')[1].value;
@@ -49,13 +51,20 @@
         if (login == '') {
           document.querySelectorAll('.yeah')[0].classList.add('incorrect1')
         }
+        return (pas1 !== '' && pas2 !== '' && login !== '')
+      }
+      function redirect() {
+        if (checkField() && check()) {
+          document.location.href = "register_continue.html"
+        }
       }
     </script>
+
     <div class="roof">
       <img src="ico/logo3.png" style="border: none; margin-left: 5px; align-self: center;" height="50px" width="120px">
-      <div class="changeThemeIcon" style="width: 35px; height: 35px; cursor: pointer; background-repeat: no-repeat;" title="Сменить цветовую тему"></div>
+      <div class="changeThemeIcon" style="width: 35px; height: 35px; display: none; cursor: pointer; background-repeat: no-repeat;" title="Сменить цветовую тему"></div>
     </div>
-    <div class="order">
+    <div class="order" style="opacity: 0.4; pointer-events: none;">
     <div class='bordered greet'>
     <h1>Добро пожаловать!</h1>
     <p>ВДурке - это социальная сеть, позволяющая вам общаться с вашими друзьями, родственниками, любимыми и близкими, не выходя из дома. Ещё мы предоставляем возможность людям объединяться в группы по интересам, оценивать записи, оставлять под записями свои мысли и много чего ещё!</p>
@@ -69,15 +78,11 @@
       <input type="text" name="change" class="yeah" onkeyup="this.classList.remove('incorrect1')" placeholder="Придумайте никнейм" onfocus="document.querySelectorAll('.yeah')[0].placeholder = ''" onblur="document.querySelectorAll('.yeah')[0].placeholder = 'Придумайте никнейм'">
       <input type="password" name="change" onkeyup="this.classList.remove('incorrect1'), check()" class="yeah" placeholder="Придумайте пароль" onfocus="document.querySelectorAll('.yeah')[1].placeholder = ''" onblur="document.querySelectorAll('.yeah')[1].placeholder = 'Придумайте пароль'">
       <input type="password" name="change" onkeyup="this.classList.remove('incorrect1'), check()" class="yeah" placeholder="Подтвердите пароль" onfocus="document.querySelectorAll('.yeah')[2].placeholder = ''" onblur="document.querySelectorAll('.yeah')[2].placeholder = 'Подтвердите пароль'">
-      <a href="register_continue.html"><input type="submit" name="" onclick="checkField()" class="reg" value="Продолжить регистрацию"></a>
+      <input type="submit" name="" onclick="checkField(), redirect()" class="reg" value="Продолжить регистрацию">
 
       <span><p class="incorrect" style="display: none;">Пароли не сходятся</p></span>
       <p class="already-have">Вы уже есть ВДурке? <a onclick="popupVisible()" style="cursor: pointer; color: blue;">Войти</a></p>
-      <p class="already-have">Войти с помощью:</p>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1200px-Google_%22G%22_Logo.svg.png" alt="" height="40px">
-      <img src="ico/vkround.png" alt="" height="40px">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="" height="40px">
-      <img src="https://2.bp.blogspot.com/-r3brlD_9eHg/XDz5bERnBMI/AAAAAAAAG2Y/XfivK0eVkiQej2t-xfmlNL6MlSQZkvcEACK4BGAYYCw/s1600/logo%2Breddit.png" alt="" height="40px">
+
   </div>
   <div class="covid bordered" onclick="updateCases()">
     <h1>Коронавирус в России</h1>
@@ -97,8 +102,15 @@
     <p style=" float: left; margin-top: 0px; margin-left: 3px; font-size: 12px;">Забыли пароль? <a class="forgotten" href="" style="text-decoration: none; color: blue;" title="Восстановление пароля">Восстановить</a></p>
   </div>
 
+
   <script src="scripts/switchTheme.js">
   </script>
+</div>
+<div class="vk-popup bordered">
+  <h1 style="border-bottom: 1px #c0c0c0 solid;">Список изменений</h1>
+  <p style="text-align: left;">Следите за обновлениями тут: <a href="http://vk.com/vdurke_official">Группа ВКонтакте</a>.<br> Темная тема временно <span style="text-decoration: underline; color: #e74c3c;">отключена</span>.</p>
+
+  <input type="submit" name="" value="Закрыть" class="bordered" onclick="document.querySelector('.vk-popup').style.display = 'none', document.querySelector('.order').style.cssText = 'opacity: 1; pointer-events: auto;'" style="height: 40px; width: 90%; font-size: 16px; font-weight: bolder; cursor: pointer; margin: 30px 0 15px 0;">
 </div>
 
 <script src="scripts/covid.js">
