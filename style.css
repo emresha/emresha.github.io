@@ -275,6 +275,7 @@ input {
 }
 
 .vk-popup {
+  width: 80%;
   transition: 0.4s;
   padding: 5px;
   top: 50%;

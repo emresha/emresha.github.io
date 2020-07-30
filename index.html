@@ -97,8 +97,8 @@
   <input type="text" name="change" class="login-plhr" placeholder="Ваш никнейм" onfocus="document.querySelectorAll('.login-plhr')[0].placeholder = ''" onblur="document.querySelectorAll('.login-plhr')[0].placeholder = 'Ваш никнейм'">
   <input type="password" name="change" class="login-plhr" placeholder="Ваш пароль" onfocus="document.querySelectorAll('.login-plhr')[1].placeholder = ''" onblur="document.querySelectorAll('.login-plhr')[1].placeholder = 'Ваш пароль'">
   <div class="submit-close">
-    <input type="submit" name="" value="Войти" style="cursor: pointer;">
-    <input type="submit" name="" value="Закрыть" style="cursor: pointer; background: white; border-radius: 3px; border: 2px	#C0C0C0 solid;" onclick="popupVisible()">
+    <input type="submit" name="" value="Войти" class="log-btn" style="cursor: pointer;">
+    <input type="submit" name="" value="Закрыть" class="log-btn" style="cursor: pointer; background: white; border-radius: 3px; border: 2px	#C0C0C0 solid;" onclick="popupVisible()">
     <p style=" float: left; margin-top: 0px; margin-left: 3px; font-size: 12px;">Забыли пароль? <a class="forgotten" href="" style="text-decoration: none; color: blue;" title="Восстановление пароля">Восстановить</a></p>
   </div>
 
@@ -110,7 +110,7 @@
   <h1 style="border-bottom: 1px #c0c0c0 solid;">Список изменений</h1>
   <p style="text-align: left;">Следите за обновлениями тут: <a href="http://vk.com/vdurke_official">Группа ВКонтакте</a>.<br> Темная тема временно <span style="text-decoration: underline; color: #e74c3c;">отключена</span>.</p>
 
-  <input type="submit" name="" value="Закрыть" class="bordered" onclick="document.querySelector('.vk-popup').style.display = 'none', document.querySelector('.order').style.cssText = 'opacity: 1; pointer-events: auto;'" style="height: 40px; width: 90%; font-size: 16px; font-weight: bolder; cursor: pointer; margin: 30px 0 15px 0;">
+  <input type="submit" name="" value="Закрыть" class="bordered" onclick="document.querySelector('.vk-popup').style.display = 'none', document.querySelector('.order').style.cssText = 'opacity: 1; pointer-events: auto;', checkWidth()" style="height: 40px; width: 90%; font-size: 16px; font-weight: bolder; cursor: pointer; margin: 30px 0 15px 0;">
 </div>
 
 <script src="scripts/covid.js">
