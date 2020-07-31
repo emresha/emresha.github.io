@@ -13,15 +13,15 @@
 
     <div class="roof">
       <img src="ico/logo3.png" style="border: none; margin-left: 5px; align-self: center;" height="50px" width="120px">
-      <div class="changeThemeIcon" style="width: 35px; height: 35px; cursor: pointer; background-repeat: no-repeat;" title="Сменить цветовую тему"></div>
     </div>
     <div class="reg bordered" style='text-align: center;'>
       <h1 style="border-bottom: 1px #C0C0C0 solid; padding-bottom: 5px;">Регистрация</h1>
       <p>Спасибо, что заинтересовались в регистрации ВДурке! Пожалуйста, вводите свои настоящие данные, чтобы найти вас ВДурке было легче.</p>
       <p style="font-size: 12px;">* обязательно</p>
       <input type="name" name="" placeholder="Ваше имя *">
-      <input type="name" name="" placeholder="Ваша фамилия *">
+      <input type="surname" name="" placeholder="Ваша фамилия *">
       <input type="email" name="" placeholder="Ваша почта *">
+      <input type="phone" name="phone" required placeholder="Ваш номер телефона">
       <textarea name="name" rows="4" cols="80" placeholder="О вас" oninput="symbolsCount()" onkeyup="symbolsCount()"></textarea>
       <p class="counter" style="font-size: 10px; margin: 0; text-align: left; margin-left: 15%;" >Символов осталось: <span class='numbers'>255</span></p>
       <input type="submit" name="" value="Закончить регистрацию" class="submit_button" onclick="checkFields(), document.location.href='register_continue.html'">
@@ -44,6 +44,10 @@
         }
         }
       </script>
+
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="scripts/jquery.maskedinput.min.js"></script>
+    <script src="scripts/reg_continue_script.js"></script>
   </body>
 </html>

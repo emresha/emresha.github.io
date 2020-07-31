@@ -44,7 +44,7 @@ div {
   max-width: 500px;
   min-width: 250px;
 }
-.reg input[type="name"], .reg input[type="email"] {
+.reg input[type="name"], .reg input[type="email"], .reg input[type="surname"], .reg input[name="phone"]  {
   width: 70%;
   text-align: center;
   margin-bottom: 5px;
@@ -54,7 +54,7 @@ div {
   transition: 0.4s;
   min-width: 200px;
 }
-.reg input[type="name"]:focus, .reg input[type="email"]:focus {
+.reg input[type="name"]:focus, .reg input[type="email"]:focus, .reg input[type="surname"]:focus, .reg input[name="phone"]:focus {
   width: 75%;
 }
 
