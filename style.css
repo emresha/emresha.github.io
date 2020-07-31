@@ -1,6 +1,7 @@
 .greet {
   padding: 0 0 1px 5px;
-  margin: 3px 0 5px 3px;
+  margin: 3px;
+  margin-bottom: 0;
   padding-bottom: 0;
   max-width: 550px;
 
@@ -16,17 +17,10 @@
 }
 
 .roof {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
   background-color: #1abc9c;
+  margin-bottom: 1px;
   margin: 0;
   border-bottom: solid 2px #16a085;
-  justify-content : space-between;
-  flex-direction: row;
-  align-items: center;
 
 }
 .changeThemeIcon {
@@ -214,7 +208,7 @@ html, body {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
-  display: -webkit-flex;    
+  display: -webkit-flex;
   flex-flow: column nowrap;
   height: 63%;
   margin: 3px;
