@@ -1,125 +1,57 @@
 <!DOCTYPE html>
 <html lang="ru" dir="ltr">
   <head>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <link rel='stylesheet' href='styles/welcome_style.css'>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="ico/logo_small.png" type="image/png">
-    <title>ВДурке | Добро пожаловать!</title>
+    <title>Вдурке</title>
+    <link rel="stylesheet" href="stylesheets/index_css.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   </head>
-  <body onresize="checkWidth()" onload="checkWidth()">
-    <script>
-      function popupVisible() {
-        if (document.querySelector('.login-popup').style.display === "none") {
-          document.querySelector('.login-popup').style.display = 'block';
-          document.querySelector('.order').style.cssText = "opacity: 0.4; pointer-events: none;"
-          checkWidth();
-        }
-        else {
-          document.querySelector('.login-popup').style.display = 'none';
-          document.querySelector('.order').style.cssText = "opacity: 1; pointer-events: auto;"
-          checkWidth();
-        }
-      }
-    </script>
-    <script>
-      function check() {
-        let pas1 = document.querySelectorAll('.yeah')[1].value;
-        let pas2 = document.querySelectorAll('.yeah')[2].value;
-        let login = document.querySelectorAll('.yeah')[0].value;
-        let sp = document.querySelector('.incorrect');
-        if (pas1 !== pas2) {
-          sp.style.display = "block";
-        }
-        else {
-            sp.style.display = "none"
-          }
-        return pas1 === pas2
-      };
-      function checkField() {
-        let pas1 = document.querySelectorAll('.yeah')[1].value;
-        let pas2 = document.querySelectorAll('.yeah')[2].value;
-        let login = document.querySelectorAll('.yeah')[0].value;
-        if (pas1 == '') {
-          document.querySelectorAll('.yeah')[1].classList.add('incorrect1')
-        }
-        if (pas2 == '') {
-          document.querySelectorAll('.yeah')[2].classList.add('incorrect1')
-        }
-        if (login == '') {
-          document.querySelectorAll('.yeah')[0].classList.add('incorrect1')
-        }
-        return (pas1 !== '' && pas2 !== '' && login !== '')
-      }
-      function redirect() {
-        if (checkField() && check()) {
-          document.location.href = "register_continue.html"
-        }
-      }
-    </script>
-
-    <div class="roof">
-      <img src="ico/logo3.png" style="border: none; margin-left: 5px; align-self: center;" height="50px" width="120px">
-      <div class="changeThemeIcon" style="width: 35px; height: 35px; display: none; cursor: pointer; background-repeat: no-repeat;" title="Сменить цветовую тему"></div>
+  <body>
+    <header>
+      <nav>
+        <div class="logo-search">
+        <div class="logo">
+          <h3>ВДурке</h3>
+        </div>
+        <div class="search">
+          <input type="text" name="search" value="" placeholder="Поиск" autocomplete="off">
+        </div>
+      </div>
+      <div class="log-in-btn" onclick="document.querySelector('.log-in').classList.toggle('hidden2')">
+        Войти
+      </div>
+      </nav>
+    </header>
+    <div class="log-in hidden2">
+      <h3>Вход</h3>
+      <hr>
+      <form action="index.html" method="post">
+        <input type="email" name="" value="" required placeholder="Ваша почта">
+        <input type="password" name="" value="" required placeholder="Пароль">
+        <input type="submit" name="" value="Войти" style="background: #6e6e6e; cursor: pointer;">
+      </form>
+      <p>Забыли пароль? <span>Войти</span></p>
     </div>
-    <div class="order" style="opacity: 0.4; pointer-events: none;">
-    <div class='bordered greet'>
-    <h1>Добро пожаловать!</h1>
-    <p>ВДурке - это социальная сеть, позволяющая вам общаться с вашими друзьями, родственниками, любимыми и близкими, не выходя из дома. Ещё мы предоставляем возможность людям объединяться в группы по интересам, оценивать записи, оставлять под записями свои мысли и много чего ещё!</p>
-    <img src="photos/saniatr.png" alt="durka-greeting" height="300" >
-  </div>
-  <div class="login-covid" style="border: none; background: inherit; transition: 0s;">
-  <div class="bordered login">
-
-      <h1 style="text-align: center;">Регистрация</h1>
-      <p>Регистрация ВДурке - это легко и просто. После регистрации вы получите полный доступ ко всем возможностям ВДурке.</p>
-      <input type="text" name="change" class="yeah" onkeyup="this.classList.remove('incorrect1')" placeholder="Придумайте никнейм" onfocus="document.querySelectorAll('.yeah')[0].placeholder = ''" onblur="document.querySelectorAll('.yeah')[0].placeholder = 'Придумайте никнейм'">
-      <input type="password" name="change" onkeyup="this.classList.remove('incorrect1'), check()" class="yeah" placeholder="Придумайте пароль" onfocus="document.querySelectorAll('.yeah')[1].placeholder = ''" onblur="document.querySelectorAll('.yeah')[1].placeholder = 'Придумайте пароль'">
-      <input type="password" name="change" onkeyup="this.classList.remove('incorrect1'), check()" class="yeah" placeholder="Подтвердите пароль" onfocus="document.querySelectorAll('.yeah')[2].placeholder = ''" onblur="document.querySelectorAll('.yeah')[2].placeholder = 'Подтвердите пароль'">
-      <input type="submit" name="" onclick="checkField(), redirect()" class="reg" value="Продолжить регистрацию">
-
-      <span><p class="incorrect" style="display: none;">Пароли не сходятся</p></span>
-      <p class="already-have">Вы уже есть ВДурке? <a onclick="popupVisible()" style="cursor: pointer; color: blue;">Войти</a></p>
-
-  </div>
-  <div class="covid bordered" onclick="updateCases()">
-    <h1>Коронавирус в России</h1>
-    <p class="cases" style="color: #ff7675;"></p>
-    <p style="clear: both; font-size: 12px;">Чтобы не оказаться в числе заразившихся, лучше оставайтесь #ВДурке.</p>
-  </div>
-</div>
-</div>
-<div class="login-popup bordered" style="text-align: center; display: none;">
-  <h1 style="border-bottom: 1px #c0c0c0 solid;">Вход</h1>
-  <p>Если у вас уже есть аккаунт ВДурке, то вводите те данные, которые использовали при регистрации.</p>
-  <input type="text" name="change" class="login-plhr" placeholder="Ваш никнейм" onfocus="document.querySelectorAll('.login-plhr')[0].placeholder = ''" onblur="document.querySelectorAll('.login-plhr')[0].placeholder = 'Ваш никнейм'">
-  <input type="password" name="change" class="login-plhr" placeholder="Ваш пароль" onfocus="document.querySelectorAll('.login-plhr')[1].placeholder = ''" onblur="document.querySelectorAll('.login-plhr')[1].placeholder = 'Ваш пароль'">
-  <div class="submit-close">
-    <input type="submit" name="" value="Войти" class="log-btn" style="cursor: pointer;">
-    <input type="submit" name="" value="Закрыть" class="log-btn" style="cursor: pointer; background: white; border-radius: 3px; border: 2px	#C0C0C0 solid;" onclick="popupVisible()">
-    <p style=" float: left; margin-top: 0px; margin-left: 3px; font-size: 12px;">Забыли пароль? <a class="forgotten" href="" style="text-decoration: none; color: blue;" title="Восстановление пароля">Восстановить</a></p>
-  </div>
-
-
-  <script src="scripts/switchTheme.js">
-  </script>
-</div>
-<div class="vk-popup bordered" style="max-width: 700px;">
-  <h1 style="border-bottom: 1px #c0c0c0 solid;">Список изменений</h1>
-  <p style="text-align: left;">Следите за обновлениями тут: <a href="http://vk.com/vdurke_official">Группа ВКонтакте</a>.<br> Темная тема временно <span style="text-decoration: underline; color: #e74c3c;">отключена</span>.</p>
-
-  <input type="submit" name="" value="Закрыть" class="bordered" onclick="document.querySelector('.vk-popup').style.display = 'none', document.querySelector('.order').style.cssText = 'opacity: 1; pointer-events: auto;', checkWidth()" style="height: 40px; width: 90%; font-size: 16px; font-weight: bolder; cursor: pointer; margin: 30px 0 15px 0;">
-</div>
-
-<script src="scripts/covid.js">
-</script>
-<script src="scripts/responsiveDesign.js">
-</script>
-
-        <footer style="width: 100%;">
-          <p>ВДурке © 2020 <span style="float: right; margin-right: 3px;"><a href="" style="color: lightgrey;">Помощь</a> <a href="" style="color: lightgrey;">Лицензионное соглашение</a> <a style="color: lightgrey">Debug 1.0</a></span></p>
-        </footer>
+    <main>
+      <section class="welcome">
+        <h1>Добро пожаловать!</h1>
+        <hr>
+        <p>Мы очень рады видеть вас ВДурке! ВДурке - это социальная сеть,
+          в которой количество ненужных функций сведено к минимуму: никаких глупых видео-лент, онлайн-игр, бесполезных вкладок и тому подобного. Более того, мы работаем исключительно на ваших пожертвованиях,
+           что говорит о том, вы не встретите никакой рекламы ВДурке. Регистрация ВДурке - это легко и просто, поэтому давайте начнём.</p>
+        <form class="" action="" method="post">
+          <input type="text" name="name" value="" class="first-fields" required placeholder="Ваше имя">
+          <input type="text" name="lastname" required class="first-fields" placeholder="Ваша фамилия">
+          <input type="password" name="pass1" class="hidden" required placeholder="Придумайте пароль">
+          <input type="password" name="pass2" class="hidden" required placeholder="Подтвердите пароль">
+          <input type="email" name=""  required class="hidden" value="" placeholder="Ваша почта">
+          <input type="button" class="continue-reg" value="Продолжить регистрацию" style="cursor: pointer;" onclick="continueReg()">
+          <input type="submit" name="" class="hidden" value="Закончить регистрацию" style="background: #9a9a9a;">
+        </form>
+      </section>
+    </main>
+    <footer><hr>VDurke 2020  ¯\_(ツ)_/¯</footer>
+    <script src="scripts/continueReg.js"></script>
   </body>
 </html>

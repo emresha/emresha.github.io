@@ -1,0 +1,247 @@
+.logo-search {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 70%;
+  max-width: 500px;
+}
+
+.logo {
+  margin: 0px 50px 0 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.logo:active {
+  transform: translateY(1px);
+}
+
+.search input {
+  padding: 5px;
+  padding-left: 25px;
+  border-radius: 15px;
+  width: 115%;
+  background: #6b6b6b url('../images/svg_icons/lupe_icon.svg') no-repeat;
+  background-position: left;
+  color: white;
+  outline: none;
+  border: 2px #6b6b6b solid;
+  transition: 0.2s;
+}
+
+.search input::placeholder {
+  color: #8e8e8e;
+}
+
+.search input:focus {
+  width: 130%;
+}
+
+header {
+  width: 100%;
+}
+
+.log-in {
+  box-shadow: -1px 0px 12px 1px rgba(0, 0, 0, 0.26);
+  color: white;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  position: absolute;
+  top: 45px;
+  right: 5px;
+  background: #3b3b3b;
+  max-width: 400px;
+  width: 50%;
+  border: none;
+  border-radius: 0 0 10px 10px;
+}
+
+.log-in form {
+  width: 100%;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
+.log-in span {
+  color: #b1f6ff;
+  text-decoration: underline;
+}
+
+.opacity-event {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.log-in input {
+  border: none;
+  border-radius: 3px;
+  padding: 0 15px 0 15px;
+  color: white;
+  height: 25px;
+  outline: none;
+  background: #414141;
+  width: 80%;
+  margin: 3px 0 3px 0;
+}
+
+.log-in h1 {
+  margin: 0;
+}
+
+.hidden2 {
+  display: none;
+}
+
+.log-in hr {
+  margin: 0;
+  width: 100%;
+  border: 1px #666666 solid;
+}
+
+body {
+  min-height: 100vh;
+  background: #2d2d2d;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: auto;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  height: 45px;
+  width: 100%;
+  background: #595959;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.welcome {
+  max-width: 650px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 2px #595959 solid;
+  padding: 5px 10px 5px 10px;
+  width: 70%;
+  background-color: #595959;
+  color: white;
+  flex: 1;
+}
+
+.log-in-btn {
+  margin-right: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.welcome h1 {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.welcome hr {
+  border: #666666 1px solid;
+}
+
+.welcome form {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.welcome form input {
+  width: 50%;
+  color: white;
+  background: inherit;
+  border: none;
+  border-bottom: 3px #6b6b6b solid;
+  border-right: 3px #6b6b6b solid;
+  border-radius: 4px;
+  padding: 5px;
+  padding-left: 10px;
+  margin: 3px;
+  outline: none;
+}
+
+footer {
+  margin-top: auto;
+  align-self: center;
+  width: 70%;
+  max-width: 650px;
+  color: #666666;
+  text-align: center;
+}
+
+footer hr {
+  border: 1px #575757 solid;
+}
+
+.welcome form input::placeholder {
+  color: #8e8e8e;
+}
+
+.continue-reg {
+  border: none !important;
+  background: #9a9a9a !important;
+}
+
+.hidden {
+  transition: 0.2s;
+  display: none;
+}
+
+@media screen and (max-width: 600px) and (min-width: 300px) {
+  .welcome {
+    width: 90%;
+  }
+  .welcome input {
+    width: 90% !important;
+  }
+
+  input {
+    margin: 5px;
+  }
+
+  footer {
+    width: 90%;
+  }
+
+  .log-in {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .welcome {
+    width: 100%;
+  }
+  .welcome input {
+    width: 90% !important;
+  }
+  .log-in {
+    width: 75%;
+  }
+  footer {
+    width: 100%;
+  }
+}
+
+main {
+  padding: 0px 25px 0px 25px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
