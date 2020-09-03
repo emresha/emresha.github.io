@@ -205,7 +205,7 @@ footer hr {
 
 @media screen and (max-width: 600px) and (min-width: 300px) {
   .welcome {
-    width: 90%;
+    width: 100%;
   }
   .welcome input {
     width: 90% !important;
@@ -216,7 +216,7 @@ footer hr {
   }
 
   footer {
-    width: 90%;
+    width: 100%;
   }
 
   .log-in {
@@ -227,6 +227,7 @@ footer hr {
 @media screen and (max-width: 300px) {
   .welcome {
     width: 100%;
+    font-size: 14px;
   }
   .welcome input {
     width: 90% !important;
